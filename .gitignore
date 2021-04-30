@@ -1,0 +1,15 @@
+/.vs
+/env
+/node_modules
+/obj
+/templates/css
+/templates/images
+/templates/js
+/templates/styles.css
+ab.py
+app.py
+flask_sahs.pyproj
+flask_sahs.pyproj.user
+flask_sahs.sln
+package-lock.json
+requirements.txt
