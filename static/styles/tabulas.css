@@ -36,14 +36,13 @@ body{
   background:rgb(170, 177, 236) ;
 }
 
-.zoom-without-container {
-	transition: transform .4s; /* Animation */
-	margin: 0 auto;
-  }
-  .zoom-without-container img{
-	  width: 300%;
-	  height:auto;	
-  }
-  .zoom-without-container:hover {
-	transform: scale(1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+th, td {
+	text-align: left;
+	padding: 8px;
+}

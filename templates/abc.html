@@ -13,7 +13,7 @@
     <script src="/static/styles/funk.js"></script>
 
 </head>
-<body background-color="#538b8485">
+<body >
    <div class="mytabs">
     <input type="radio" id="tabsak" name="mytabs" checked="checked">
     <label for="tabsak">Sakumlapa</label>
@@ -24,15 +24,7 @@
     <input type="radio" id="tabtabula" name="mytabs">
     <label for="tabtabula">Tabula</label>
     <div class="tab">
-    <table class="table table-striped">
-        <!-- <tr>
-            {% for dictionary in findSpele %}
-            <th>
-               {{dictionary}}
-                <img src="{{dictionary.foto_fin}}" >
-            </th>
-            {%endfor%}
-        </tr> -->
+    <table class="table table-striped" >
         <tr>
             {%for headers in findSpele[0].keys()%}
             <th>
@@ -62,7 +54,7 @@
                 </td>
                 <td>
 
-                        <img src="{{dic.foto_fin}}"  width="225"px>
+                        <img src="{{dic.foto_fin}}" width="200%">
 
                 </td>
                 <td>
