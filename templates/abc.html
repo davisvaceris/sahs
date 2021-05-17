@@ -18,8 +18,9 @@
     <input type="radio" id="tabsak" name="mytabs" checked="checked">
     <label for="tabsak">Sakumlapa</label>
     <div class="tab">
-        <p>text to display</p>
-    </div>
+        <p>text to display</p> 
+        <img src="/templates/images/bisda.svg">
+    </div>  
     
     <input type="radio" id="tabtabula" name="mytabs">
     <label for="tabtabula">Tabula</label>
@@ -54,7 +55,7 @@
                 </td>
                 <td>
 
-                        <img src="{{dic.foto_fin}}" width="200%">
+                        <img id= "{{dic.spele_id}}" src="{{dic.foto_fin}}" width="200%" >
 
                 </td>
                 <td>
@@ -62,7 +63,7 @@
                 </td>
                 <td>
                     {{dic.uzvaretajs}}
-                </td>git
+                </td>
                 <td>
                     {{dic.rezultats}}
                 </td>
@@ -73,6 +74,106 @@
 
 </div>
 </div> 
+
+<div class="wrapper hiddendiv" id="sahalau" >
+    <div class="top">
+      <!-- <div class="wrapper-inner">
+        <div class="box-inner">A</div>
+        <div class="box-inner">B</div>
+        <div class="box-inner">C</div>
+        <div class="box-inner">D</div>
+        <div class="box-inner">E</div>
+        <div class="box-inner">F</div>
+        <div class="box-inner">G</div>
+        <div class="box-inner">H</div>
+      </div> -->
+    </div>
+    <div class="box" id="A8" onclick="move(this)">  <img src="images/rooda.svg" alt="rook dark" class="figura"> </div>
+    <div class="box" id="B8"><img src="images/knida.svg" alt="knight dark" class="figura"></div>
+    <div class="box" id="C8"><img src="images/bisda.svg" alt="bishop dark" class="figura"></div>
+    <div class="box" id="D8"><img src="images/queda.svg" alt="queen dark" class="figura"></div>
+    <div class="box" id="E8"><img src="images/kinda.svg" alt="king dark" class="figura"></div>
+    <div class="box" id="F8"><img src="images/bisda.svg" alt="bishop dark" class="figura"></div>
+    <div class="box" id="G8"><img src="images/knida.svg" alt="knight dark" class="figura"></div>
+    <div class="box" id="H8"><img src="images/rooda.svg" alt="rook dark" class="figura"></div>
+  
+    <div class="box" id="A7"> <img src="images/pawda.svg" alt="pawn dark" class="figura" id="PDA"> </div>
+    <div class="box" id="B7"> <img src="images/pawda.svg" alt="pawn dark" class="figura"> </div>
+    <div class="box" id="C7"> <img src="images/pawda.svg" alt="pawn dark" class="figura"> </div>
+    <div class="box" id="D7"> <img src="images/pawda.svg" alt="pawn dark" class="figura"> </div>
+    <div class="box" id="E7"> <img src="images/pawda.svg" alt="pawn dark" class="figura"> </div>
+    <div class="box" id="F7"> <img src="images/pawda.svg" alt="pawn dark" class="figura"> </div>
+    <div class="box" id="G7"> <img src="images/pawda.svg" alt="pawn dark" class="figura"> </div>
+    <div class="box" id="H7"> <img src="images/pawda.svg" alt="pawn dark" class="figura"> </div>
+    
+    <div class="box" id="A6"></div>
+    <div class="box" id="B6"></div>
+    <div class="box" id="C6"></div>
+    <div class="box" id="D6"></div>
+    <div class="box" id="E6"></div>
+    <div class="box" id="F6"></div>
+    <div class="box" id="G6"></div>
+    <div class="box" id="H6"></div>
+
+    <div class="box" id="A5"></div>
+    <div class="box" id="B5"></div>
+    <div class="box" id="C5"></div>
+    <div class="box" id="D5"></div>
+    <div class="box" id="E5"></div>
+    <div class="box" id="F5"></div>
+    <div class="box" id="G5"></div>
+    <div class="box" id="H5"></div>
+
+    <div class="box" id="A4"></div>
+    <div class="box" id="B4"></div>
+    <div class="box" id="C4"></div>
+    <div class="box" id="D4"></div>
+    <div class="box" id="E4"></div>
+    <div class="box" id="F4"></div>
+    <div class="box" id="G4"></div>
+    <div class="box" id="H4"></div>
+
+    <div class="box" id="A3"></div>
+    <div class="box" id="B3"></div>
+    <div class="box" id="C3"></div>
+    <div class="box" id="D3"></div>
+    <div class="box" id="E3"></div>
+    <div class="box" id="F3"></div>
+    <div class="box" id="G3"></div>
+    <div class="box" id="H3"></div>
+
+	<div class="box" id="A2"> <img src="images/pawli.svg" alt="pawn light" class="figura"> </div>
+    <div class="box" id="B2"> <img src="images/pawli.svg" alt="pawn light" class="figura"> </div>
+    <div class="box" id="C2"> <img src="images/pawli.svg" alt="pawn light" class="figura"> </div>
+    <div class="box" id="D2"> <img src="images/pawli.svg" alt="pawn light" class="figura"> </div>
+    <div class="box" id="E2"> <img src="images/pawli.svg" alt="pawn light" class="figura"> </div>
+    <div class="box" id="F2"> <img src="images/pawli.svg" alt="pawn light" class="figura"> </div>
+    <div class="box" id="G2"> <img src="images/pawli.svg" alt="pawn light" class="figura"> </div>
+    <div class="box" id="H2"> <img src="images/pawli.svg" alt="pawn light" class="figura"> </div>
+  
+    <div class="box" id="A1"> <img src="images/rooli.svg" alt="rook light" class="figura"> </div>
+    <div class="box" id="B1"> <img src="images/knili.svg" alt="knight light" class="figura"> </div>
+    <div class="box" id="C1"> <img src="images/bisli.svg" alt="bishop light" class="figura"> </div>
+    <div class="box" id="D1"> <img src="images/queli.svg" alt="queen light" class="figura"> </div>
+    <div class="box" id="E1"> <img src="images/kinli.svg" alt="king light" class="figura"> </div>
+    <div class="box" id="F1"> <img src="images/bisli.svg" alt="bishop light" class="figura"> </div>
+    <div class="box" id="G1"> <img src="images/knili.svg" alt="knight light" class="figura"> </div>
+    <div class="box" id="H1"> <img src="images/rooli.svg" alt="rook light" class="figura"> </div>
+    <div class="bottom">
+      <div class="wrapper-inner">
+        <div class="box-inner">A</div>
+        <div class="box-inner">B</div>
+        <div class="box-inner">C</div>
+        <div class="box-inner">D</div>
+        <div class="box-inner">E</div>
+        <div class="box-inner">F</div>
+        <div class="box-inner">G</div>
+        <div class="box-inner">H</div>
+      </div>
+    </div>
+</div>
+
+
 </body>
 
 </html>
