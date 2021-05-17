@@ -36,6 +36,14 @@ body{
   background:rgb(170, 177, 236) ;
 }
 
+/* body :not(#unblurred) {
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);    
+} */
+
 table{
 	border-collapse: collapse;
 	border-spacing: 0;
