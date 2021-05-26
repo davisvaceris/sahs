@@ -10,19 +10,18 @@ else{
 function parad() {
     var x = document.getElementById("sahalau");
     var y = document.getElementById("krusts");
-    var imag = document.getElementById("atteli");
+    var imag = document.getElementById("atttab");
 
         imag.style.cursor ="default";
         x.style.display ="block";
         y.style.display ="block";
         y.style.cursor ="pointer";
-        
 }
 
 function slept(){
     var x = document.getElementById("sahalau");
     var y = document.getElementById("krusts");
-    var imag = document.getElementById("atteli");
+    var imag = document.getElementById("atttab");
     
         imag.style.cursor ="pointer";
         x.style.display="none";
