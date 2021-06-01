@@ -11,6 +11,16 @@
     >
 
     <script src="/static/styles/funk.js"></script>
+    <script>
+        var secib =
+        [{"wp5": "e4", "bp3" : "c5"}, {"wp3": 'c4', "bz1": "c6"},{"wp1":"a3", "bp5" : "e5"},{"wp4":"d3","bl2":"e7"},{"wz2":"f3", "bz2": "f6"},
+         {"wd":"b3", "bk":"g8","bt2":"f8"}, {"wd": "c3", "bp4": "d6"}, {"wl1": "g5", "bp8": "h6"},{"wl1": "f6", "bl2":"f6"},{"wp7":"g3", "bz1": "d4"},
+          {"wz2":"d4", "bp3":"d4"},{"wd":"b3", "bp2":"b6"},{"wl2": "g2", "bl1": "e6"}];
+        //console.log(secib);
+       var smg =  document.getElementById("mesg");
+       console.log(smg);
+       //=JSON.stringify(secib);
+    </script>
 
 </head>
 <body >
@@ -19,14 +29,17 @@
     <input type="radio" id="tabsak" name="mytabs" checked="checked">
     <label for="tabsak" id="sakumlapa1" onclick="sakumla()">Sākumlapa</label>
     <div class="tab">
-        <p>text to display</p> 
+        <p id="mesg" >text to display</p> 
+        <div >
+
+        </div>
     </div>  
     
     <input type="radio" id="tabtabula" name="mytabs">
     <label for="tabtabula" id="tabula1" onclick="tabul()">Tabula</label>
     <div class="tab">
         <!-- saha laukuma sakums  -->
-        <div class="wrapper hiddendiv unblurr sticky" id="sahalau" >
+        <div class="wrapper hiddendiv unblurr sticky split right" id="sahalau" >
             <div class="top unblurr">
               <!-- <div class="wrapper-inner">
                 <div class="box-inner">A</div>
@@ -124,7 +137,7 @@
             </div>
         </div>
         <!-- saha laukuma beigas -->
-    <table class="table table-striped" >
+    <table class="table table-striped split left" >
         <tr>
             {%for headers in findSpele[0].keys()%}
             <th>
@@ -147,9 +160,6 @@
                     {{dic.melnais_speletajs}}
                 </td>
                 <td>
-                    {{dic.sakuma_punkts}}
-                </td>
-                <td>
                     {{dic.gajieni}}
                 </td>
                 <td id="atttab">
@@ -170,7 +180,6 @@
 
         {%endfor%}
     </table>
-
 </div>
 </div> 
 

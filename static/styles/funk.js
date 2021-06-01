@@ -36,7 +36,8 @@ function sakumla(){
     var sak = document.getElementById("sakumlapa1");
     var tab = document.getElementById("tabula1");
 
-    tab.style.cursor ="pointer"
+    tab.style.cursor ="pointer";
+    sak.style.cursor="default"
 
 }
 
@@ -46,7 +47,9 @@ function tabul(){
     var x = document.getElementById("sahalau");
     var y = document.getElementById("krusts");
 
-    sak.style.cursor ="pointer"
+    sak.style.cursor ="pointer";
     y.style.display="none";
     x.style.display="none";
+    tab.style.cursor="default"
 }
+
