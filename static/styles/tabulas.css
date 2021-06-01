@@ -161,18 +161,3 @@ div.sticky{
 #sakumlapa1{
 	cursor:default;
 }
-/* sadala lappu uz pusi */
-.split {
-	height: 90%;
-	width: 40%;
-	top: 0;
-	overflow-x: hidden;
-	padding-top: 20px;
-  }
-  .left {
-	left: 0;
-  }
-  .right {
-	right: 0;
-  }  
-  /* sadala lappu uz pusi */
