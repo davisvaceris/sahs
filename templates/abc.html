@@ -38,6 +38,8 @@
     <input type="radio" id="tabtabula" name="mytabs">
     <label for="tabtabula" id="tabula1" onclick="tabul()">Tabula</label>
     <div class="tab">
+        <div id="saha_apsk">
+            
         <!-- saha laukuma sakums  -->
         <div class="wrapper hiddendiv unblurr sticky " id="sahalau" >
             <div class="top unblurr">
@@ -52,7 +54,7 @@
                 <div class="box-inner">H</div>
               </div> -->
             </div>
-            <div class="box unblurr" id="A8">  <img src="static/images/rooda.svg" alt="rook dark" class="figura"> </div>
+            <div class="box unblurr" id="A8"><img src="static/images/rooda.svg" alt="rook dark" class="figura"> </div>
             <div class="box unblurr" id="B8"><img src="static/images/knida.svg" alt="knight dark" class="figura"></div>
             <div class="box unblurr" id="C8"><img src="static/images/bisda.svg" alt="bishop dark" class="figura"></div>
             <div class="box unblurr" id="D8"><img src="static/images/queda.svg" alt="queen dark" class="figura"></div>
@@ -137,6 +139,8 @@
             </div>
         </div>
         <!-- saha laukuma beigas -->
+        </div>
+        
     <table class="table table-striped split left" >
         <tr>
             {%for headers in findSpele[0].keys()%}
