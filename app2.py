@@ -1,13 +1,8 @@
 import os
 from typing import Dict 
-from flask import Flask, url_for
+from flask import Flask, url_for, request, render_template
 from flask_sqlalchemy import SQLAlchemy
-from flask import render_template
-from flask import request
-
-
-import psycopg2
-import json
+import json, psycopg2
 
 app = Flask(__name__)
 db =SQLAlchemy(app)
@@ -21,11 +16,46 @@ db =SQLAlchemy(app)
 # )
 
 dati_test = (
-(1, 'Reykjavik/ Iceland', 'Yuan', 'Zador', '1.e4 c5 2.c4 Zc6 3.a3 e5 4.d3 Le7 5.Zf3 Zf6 6.Db3 0-0 7.Dc3 d6 8.Lg5 h6 9.L:f6 L:f6 10.g3 Zd4 11.Z:d4 cd 12.Db3 b6 13.Lg2 Le6', 'https://sahsatteli.s3.eu-north-1.amazonaws.com/146.jpg', '=+', 'Zador', 'nav skaidrs'), 
-(2, 'Wijk aan Zee/ the Netherlands', 'Fu', 'Grischuk', '1.e4 c5 2.Lc4 e5 3.Dh5 Df6 4.Zf3 g6 5.D:e5+ D:e5 6.Z:e5 f6 7.Zf7 Le7 8.Z:h8', 'https://sahsatteli.s3.eu-north-1.amazonaws.com/122.jpg', '±', 'Fu', 'balto uzvara'), 
-(3, 'Lausanne/ Switzerland', 'Zador', 'Kucharski', '1.e4 c5 2.Lc4 e5 3.Dh5 Df6 4.L:f7+ D:f7 5.D:f7+ K:f7 6.Zf3 d6 7.Zc3 Le6 8.Zb5 Zc6 9.Zc7 Tc8 10.Zb5 Le7 11.0-0 h6 12.b3 Zf6 13.d3 Thd8 14.Le3 a6 15.Zc3 Zd4 16.Z:d4 cd 17.Ld2 dc 18.Le3 d5 19.Lb6 Td6 20.Le3 d4 21.Lc1 Tdd8 22.Te1 Kg8 23.f3 Tf8 24.Kf1 Zh5 25.g4 T:f3+ 26.Kg2 L:g4 27.h3 T:h3', 'https://sahsatteli.s3.eu-north-1.amazonaws.com/133.jpg', '∓', 'Kucharski', 'melno uzvara'), 
-(4, 'Tbilisi/ Georgia', 'Schmitz', 'Hunt', '1.e4 c5 2.e5 Zc6 3.Zf3 d6 4.Lb5 Ld7 5.Zc3 de 6.0-0 Dc7 7.Zd5 Da5 8.Lc4 e6 9.De1 ed', 'https://sahsatteli.s3.eu-north-1.amazonaws.com/41.jpg', '∓', 'Hunt', 'melno uzvara'), 
-(5, 'Shangha/ China', 'Alekhine', 'Hake', '1.e4 c5 2.Lc4 e5 3.a3 Zc6 4.Zf3 d6 5.0-0 Zf6 6.d3 Lg4 7.Zbd2 Le7 8.h3 Lh5 9.De1 0-0 10.Zh2 Zd4 11.Lb3 Le2 12.c3 Z:b3 13.Z:b3 L:f1 14.D:f1 Db6 15.Zd2 d5 16.ed Z:d5 17.Zc4 Dc7 18.De1 Ld6 19.De4 Zf6 20.Df3 e4 21.de L:h2+ 22.Kh1 Le5',
+(1,
+'Reykjavik/ Iceland',
+'Yuan',
+'Zador',
+'1.e4 c5 2.c4 Zc6 3.a3 e5 4.d3 Le7 5.Zf3 Zf6 6.Db3 0-0 7.Dc3 d6 8.Lg5 h6 9.L:f6 L:f6 10.g3 Zd4 11.Z:d4 cd 12.Db3 b6 13.Lg2 Le6',
+'https://sahsatteli.s3.eu-north-1.amazonaws.com/146.jpg',
+'=+',
+'Zador',
+'nav skaidrs'), 
+(2,
+'Wijk aan Zee/ the Netherlands',
+'Fu',
+'Grischuk',
+'1.e4 c5 2.Lc4 e5 3.Dh5 Df6 4.Zf3 g6 5.D:e5+ D:e5 6.Z:e5 f6 7.Zf7 Le7 8.Z:h8',
+'https://sahsatteli.s3.eu-north-1.amazonaws.com/122.jpg',
+'±',
+'Fu',
+'balto uzvara'), 
+(3,
+'Lausanne/ Switzerland',
+'Zador', 'Kucharski',
+'1.e4 c5 2.Lc4 e5 3.Dh5 Df6 4.L:f7+ D:f7 5.D:f7+ K:f7 6.Zf3 d6 7.Zc3 Le6 8.Zb5 Zc6 9.Zc7 Tc8 10.Zb5 Le7 11.0-0 h6 12.b3 Zf6 13.d3 Thd8 14.Le3 a6 15.Zc3 Zd4 16.Z:d4 cd 17.Ld2 dc 18.Le3 d5 19.Lb6 Td6 20.Le3 d4 21.Lc1 Tdd8 22.Te1 Kg8 23.f3 Tf8 24.Kf1 Zh5 25.g4 T:f3+ 26.Kg2 L:g4 27.h3 T:h3',
+'https://sahsatteli.s3.eu-north-1.amazonaws.com/133.jpg',
+'∓',
+'Kucharski',
+'melno uzvara'), 
+(4,
+'Tbilisi/ Georgia',
+'Schmitz',
+'Hunt',
+'1.e4 c5 2.e5 Zc6 3.Zf3 d6 4.Lb5 Ld7 5.Zc3 de 6.0-0 Dc7 7.Zd5 Da5 8.Lc4 e6 9.De1 ed',
+'https://sahsatteli.s3.eu-north-1.amazonaws.com/41.jpg',
+'∓',
+'Hunt',
+'melno uzvara'), 
+(5,
+'Shangha/ China',
+'Alekhine',
+'Hake',
+'1.e4 c5 2.Lc4 e5 3.a3 Zc6 4.Zf3 d6 5.0-0 Zf6 6.d3 Lg4 7.Zbd2 Le7 8.h3 Lh5 9.De1 0-0 10.Zh2 Zd4 11.Lb3 Le2 12.c3 Z:b3 13.Z:b3 L:f1 14.D:f1 Db6 15.Zd2 d5 16.ed Z:d5 17.Zc4 Dc7 18.De1 Ld6 19.De4 Zf6 20.Df3 e4 21.de L:h2+ 22.Kh1 Le5',
 'https://sahsatteli.s3.eu-north-1.amazonaws.com/107.jpg',
 '∓',
 'Hake',
