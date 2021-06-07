@@ -17,6 +17,12 @@
          {"wd":"b3", "bk":"g8","bt2":"f8"}, {"wd": "c3", "bp4": "d6"}, {"wl1": "g5", "bp8": "h6"},{"wl1": "f6", "bl2":"f6"},{"wp7":"g3", "bz1": "d4"},
           {"wz2":"d4", "bp3":"d4"},{"wd":"b3", "bp2":"b6"},{"wl2": "g2", "bl1": "e6"}];
         //console.log(secib);
+        var sakumbalt ={"wp1":"a2","wp2":"b2","wp3":"c2","wp4":"d2","wp5":"e2","wp6":"f2","wp7":"g2","wp8":"h2",
+        "wt1":"a1","wz1":"b1","wl1":"c1","wd":"d1","wk":"e1","wl2":"f1","wz2":"g1","wt2":"h1"};
+
+        var sakummeln ={"bp1":"a7","bp2":"b7","bp3":"c7","bp4":"d7","bp5":"e7","bp6":"f7","bp7":"g7","bp8":"h7",
+        "bt1":"a8","bz1":"b8","bl1":"c8","bd":"d8","bk":"e8","bl2":"f8","bz2":"g8","bt2":"h8"};
+
        var smg =  document.getElementById("mesg");
        console.log(smg);
        //=JSON.stringify(secib);
@@ -39,7 +45,7 @@
     <label for="tabtabula" id="tabula1" onclick="tabul()">Tabula</label>
     <div class="tab">
         <div id="saha_apsk">
-            
+            <div class="figurlau"></div>
         <!-- saha laukuma sakums  -->
         <div class="wrapper hiddendiv unblurr sticky " id="sahalau" >
             <div class="top unblurr">
@@ -54,25 +60,25 @@
                 <div class="box-inner">H</div>
               </div> -->
             </div>
-            <div class="box unblurr" id="A8"><img src="static/images/rooda.svg" alt="rook dark" class="figura"> </div>
-            <div class="box unblurr" id="B8"><img src="static/images/knida.svg" alt="knight dark" class="figura"></div>
-            <div class="box unblurr" id="C8"><img src="static/images/bisda.svg" alt="bishop dark" class="figura"></div>
-            <div class="box unblurr" id="D8"><img src="static/images/queda.svg" alt="queen dark" class="figura"></div>
-            <div class="box unblurr" id="E8"><img src="static/images/kinda.svg" alt="king dark" class="figura"></div>
-            <div class="box unblurr" id="F8"><img src="static/images/bisda.svg" alt="bishop dark" class="figura"></div>
-            <div class="box unblurr" id="G8"><img src="static/images/knida.svg" alt="knight dark" class="figura"></div>
-            <div class="box unblurr" id="H8"><img src="static/images/rooda.svg" alt="rook dark" class="figura"></div>
+            <div class="box unblurr" id="A8"><img src="static/images/rooda.svg" alt="rook dark" class="figura" id="bt1"> </div>
+            <div class="box unblurr" id="B8"><img src="static/images/knida.svg" alt="knight dark" class="figura" id="bz1"></div>
+            <div class="box unblurr" id="C8"><img src="static/images/bisda.svg" alt="bishop dark" class="figura" id="bl1"></div>
+            <div class="box unblurr" id="D8"><img src="static/images/queda.svg" alt="queen dark" class="figura" id="bd1"></div>
+            <div class="box unblurr" id="E8"><img src="static/images/kinda.svg" alt="king dark" class="figura" id="bk1"></div>
+            <div class="box unblurr" id="F8"><img src="static/images/bisda.svg" alt="bishop dark" class="figura" id="bl2"></div>
+            <div class="box unblurr" id="G8"><img src="static/images/knida.svg" alt="knight dark" class="figura" id="bz2"></div>
+            <div class="box unblurr" id="H8"><img src="static/images/rooda.svg" alt="rook dark" class="figura" id="bt2"></div>
           
-            <div class="box unblurr" id="A7"> <img src="static/images/pawda.svg" alt="pawn dark" class="figura" id="PDA"> </div>
-            <div class="box unblurr" id="B7"> <img src="static/images/pawda.svg" alt="pawn dark" class="figura"> </div>
-            <div class="box unblurr" id="C7"> <img src="static/images/pawda.svg" alt="pawn dark" class="figura"> </div>
-            <div class="box unblurr" id="D7"> <img src="static/images/pawda.svg" alt="pawn dark" class="figura"> </div>
-            <div class="box unblurr" id="E7"> <img src="static/images/pawda.svg" alt="pawn dark" class="figura"> </div>
-            <div class="box unblurr" id="F7"> <img src="static/images/pawda.svg" alt="pawn dark" class="figura"> </div>
-            <div class="box unblurr" id="G7"> <img src="static/images/pawda.svg" alt="pawn dark" class="figura"> </div>
-            <div class="box unblurr" id="H7"> <img src="static/images/pawda.svg" alt="pawn dark" class="figura"> </div>
+            <div class="box unblurr" id="A7"> <img src="static/images/pawda.svg" alt="pawn dark" class="figura" id="bp1"> </div>
+            <div class="box unblurr" id="B7"> <img src="static/images/pawda.svg" alt="pawn dark" class="figura" id="bp2"> </div>
+            <div class="box unblurr" id="C7"> <img src="static/images/pawda.svg" alt="pawn dark" class="figura" id="bp3"> </div>
+            <div class="box unblurr" id="D7"> <img src="static/images/pawda.svg" alt="pawn dark" class="figura" id="bp4"> </div>
+            <div class="box unblurr" id="E7"> <img src="static/images/pawda.svg" alt="pawn dark" class="figura" id="bp5"> </div>
+            <div class="box unblurr" id="F7"> <img src="static/images/pawda.svg" alt="pawn dark" class="figura" id="bp6"> </div>
+            <div class="box unblurr" id="G7"> <img src="static/images/pawda.svg" alt="pawn dark" class="figura" id="bp7"> </div>
+            <div class="box unblurr" id="H7"> <img src="static/images/pawda.svg" alt="pawn dark" class="figura" id="bp8"> </div>
             
-            <div class="box unblurr" id="A6" onclick="move(this)"></div>
+            <div class="box unblurr" id="A6"></div>
             <div class="box unblurr" id="B6"></div>
             <div class="box unblurr" id="C6"></div>
             <div class="box unblurr" id="D6"></div>
@@ -108,23 +114,23 @@
             <div class="box unblurr" id="G3"></div>
             <div class="box unblurr" id="H3"></div>
         
-            <div class="box unblurr" id="A2"> <img src="static/images/pawli.svg" alt="pawn light" class="figura"> </div>
-            <div class="box unblurr" id="B2"> <img src="static/images/pawli.svg" alt="pawn light" class="figura"> </div>
-            <div class="box unblurr" id="C2"> <img src="static/images/pawli.svg" alt="pawn light" class="figura"> </div>
-            <div class="box unblurr" id="D2"> <img src="static/images/pawli.svg" alt="pawn light" class="figura"> </div>
-            <div class="box unblurr" id="E2"> <img src="static/images/pawli.svg" alt="pawn light" class="figura"> </div>
-            <div class="box unblurr" id="F2"> <img src="static/images/pawli.svg" alt="pawn light" class="figura"> </div>
-            <div class="box unblurr" id="G2"> <img src="static/images/pawli.svg" alt="pawn light" class="figura"> </div>
-            <div class="box unblurr" id="H2"> <img src="static/images/pawli.svg" alt="pawn light" class="figura"> </div>
+			<div class="box unblurr" id="A2"> <img src="static/images/pawli.svg" alt="pawn light" class="figura" id="wp1"> </div>
+            <div class="box unblurr" id="B2"> <img src="static/images/pawli.svg" alt="pawn light" class="figura" id="wp2"> </div>
+            <div class="box unblurr" id="C2"> <img src="static/images/pawli.svg" alt="pawn light" class="figura" id="wp3"> </div>
+            <div class="box unblurr" id="D2"> <img src="static/images/pawli.svg" alt="pawn light" class="figura" id="wp4"> </div>
+            <div class="box unblurr" id="E2"> <img src="static/images/pawli.svg" alt="pawn light" class="figura" id="wp5"> </div>
+            <div class="box unblurr" id="F2"> <img src="static/images/pawli.svg" alt="pawn light" class="figura" id="wp6"> </div>
+            <div class="box unblurr" id="G2"> <img src="static/images/pawli.svg" alt="pawn light" class="figura" id="wp7"> </div>
+            <div class="box unblurr" id="H2"> <img src="static/images/pawli.svg" alt="pawn light" class="figura" id="wp8"> </div>
                            
-            <div class="box unblurr" id="A1"> <img src="static/images/rooli.svg" alt="rook light" class="figura"> </div>
-            <div class="box unblurr" id="B1"> <img src="static/images/knili.svg" alt="knight light" class="figura"> </div>
-            <div class="box unblurr" id="C1"> <img src="static/images/bisli.svg" alt="bishop light" class="figura"> </div>
-            <div class="box unblurr" id="D1"> <img src="static/images/queli.svg" alt="queen light" class="figura"> </div>
-            <div class="box unblurr" id="E1"> <img src="static/images/kinli.svg" alt="king light" class="figura"> </div>
-            <div class="box unblurr" id="F1"> <img src="static/images/bisli.svg" alt="bishop light" class="figura"> </div>
-            <div class="box unblurr" id="G1"> <img src="static/images/knili.svg" alt="knight light" class="figura"> </div>
-            <div class="box unblurr" id="H1"> <img src="static/images/rooli.svg" alt="rook light" class="figura"> </div>
+            <div class="box unblurr" id="A1"> <img src="static/images/rooli.svg" alt="rook light" class="figura" id="wt1"> </div>
+            <div class="box unblurr" id="B1"> <img src="static/images/knili.svg" alt="knight light" class="figura" id="wz1"> </div>
+            <div class="box unblurr" id="C1"> <img src="static/images/bisli.svg" alt="bishop light" class="figura" id="wl1"> </div>
+            <div class="box unblurr" id="D1"> <img src="static/images/queli.svg" alt="queen light" class="figura" id="wd1"> </div>
+            <div class="box unblurr" id="E1"> <img src="static/images/kinli.svg" alt="king light" class="figura" id="wk1"> </div>
+            <div class="box unblurr" id="F1"> <img src="static/images/bisli.svg" alt="bishop light" class="figura" id="wl2"> </div>
+            <div class="box unblurr" id="G1"> <img src="static/images/knili.svg" alt="knight light" class="figura" id="wz2"> </div>
+            <div class="box unblurr" id="H1"> <img src="static/images/rooli.svg" alt="rook light" class="figura" id="wt2"> </div>
             <div class="bottom unblurr">
               <div class="wrapper-inner unblurr">
                 <div class="box-inner unblurr">A</div>
