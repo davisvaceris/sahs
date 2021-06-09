@@ -7,6 +7,7 @@ else{
     }
 }
 
+//parādīšanas un slēpšanas funkcija attēliem sākums
 function parad() {
     var x = document.getElementById("sahalau");
     var y = document.getElementById("krusts");
@@ -26,11 +27,14 @@ function slept(){
     var imag = document.getElementById("atttab");
     
         imag.style.cursor ="pointer";
-        // x.style.display="none";
         y.style.display="none";
         x.style.display="none";
 
 }
+
+//parādīšanas un slēpšanas funkcija attēliem beigas
+
+// parādīšanas un slepsana funkcija sadaļām sākums
 
 function sakumla(){
     var sak = document.getElementById("sakumlapa1");
@@ -53,3 +57,4 @@ function tabul(){
     tab.style.cursor="default"
 }
 
+// parādīšanas un slepsana funkcija sadaļām beigas

@@ -1,3 +1,4 @@
+# autors Dāvis Vāceris 2021
 import os
 from typing import Dict 
 from flask import Flask, url_for, request, render_template
@@ -7,13 +8,7 @@ import json, psycopg2
 app = Flask(__name__)
 db =SQLAlchemy(app)
 
-# con = psycopg2.connect(
-#             host = "localhost",
-#             port = 5432,
-#             database = "sahs",
-#             user = "postgres",
-#             password = "students"
-# )
+#šahu dati 
 
 dati_test = (
 (1,
@@ -1360,11 +1355,12 @@ dati_test = (
 
 dictionary = []
 
+#vārdnīca
 
 for vertiba in dati_test:
     temp_dic={} 
-    temp_dic["spele_id"]=vertiba[0]
-    temp_dic["pilseta_valsts"]=vertiba[1]
+    temp_dic["numurs"]=vertiba[0]
+    temp_dic["pilseta/valsts"]=vertiba[1]
     temp_dic["baltais_speletajs"]=vertiba[2]
     temp_dic["melnais_speletajs"]=vertiba[3]
     temp_dic["gajieni"]=vertiba[4]
@@ -1373,6 +1369,8 @@ for vertiba in dati_test:
     temp_dic["uzvaretajs"]=vertiba[7]
     temp_dic["rezultats"]=vertiba[8]
     dictionary.append(temp_dic)
+
+#savienošana ar lokālo serveri
 
 @app.route('/get')
 def findSpele():

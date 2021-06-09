@@ -12,11 +12,12 @@
 
     <script src="/static/styles/funk.js"></script>
     <script>
+        //JSON 
         var secib =
         [{"wp5": "e4", "bp3" : "c5"}, {"wp3": 'c4', "bz1": "c6"},{"wp1":"a3", "bp5" : "e5"},{"wp4":"d3","bl2":"e7"},{"wz2":"f3", "bz2": "f6"},
          {"wd":"b3", "bk":"g8","bt2":"f8"}, {"wd": "c3", "bp4": "d6"}, {"wl1": "g5", "bp8": "h6"},{"wl1": "f6", "bl2":"f6"},{"wp7":"g3", "bz1": "d4"},
           {"wz2":"d4", "bp3":"d4"},{"wd":"b3", "bp2":"b6"},{"wl2": "g2", "bl1": "e6"}];
-        //console.log(secib);
+       
         var sakumbalt ={"wp1":"a2","wp2":"b2","wp3":"c2","wp4":"d2","wp5":"e2","wp6":"f2","wp7":"g2","wp8":"h2",
         "wt1":"a1","wz1":"b1","wl1":"c1","wd":"d1","wk":"e1","wl2":"f1","wz2":"g1","wt2":"h1"};
 
@@ -25,7 +26,7 @@
 
        var smg =  document.getElementById("mesg");
        console.log(smg);
-       //=JSON.stringify(secib);
+     
     </script>
 
 </head>
@@ -35,7 +36,10 @@
     <input type="radio" id="tabsak" name="mytabs" checked="checked">
     <label for="tabsak" id="sakumlapa1" onclick="sakumla()">Sākumlapa</label>
     <div class="tab">
-        <p id="mesg" >text to display</p> 
+        <p id="mesg" >Mājas lapas mērķis ir atspoguļot datus un gājienus šaha izspēlēm, sicīliešu aizsardzībai.
+        </p> 
+        <p><b style="font-size: 20px;">Lai skatītos datus:</b> <br> atvērt sadaļu <b>TABULA</b> šahu spēles ar datiem ir pieejamas apskatei</p>
+        <p><b style="font-size: 20px;">Lai skatītos detalizētu spēles izspēli:</b> <br> uzspiest uz <b>šaha laukuma attēla</b> un atveras šaha laukums ar izspēli</p>
         <div >
 
         </div>
@@ -49,16 +53,6 @@
         <!-- saha laukuma sakums  -->
         <div class="wrapper hiddendiv unblurr sticky " id="sahalau" >
             <div class="top unblurr">
-              <!-- <div class="wrapper-inner">
-                <div class="box-inner">A</div>
-                <div class="box-inner">B</div>
-                <div class="box-inner">C</div>
-                <div class="box-inner">D</div>
-                <div class="box-inner">E</div>
-                <div class="box-inner">F</div>
-                <div class="box-inner">G</div>
-                <div class="box-inner">H</div>
-              </div> -->
             </div>
             <div class="box unblurr" id="A8"><img src="static/images/rooda.svg" alt="rook dark" class="figura" id="bt1"> </div>
             <div class="box unblurr" id="B8"><img src="static/images/knida.svg" alt="knight dark" class="figura" id="bz1"></div>
@@ -145,8 +139,15 @@
             </div>
         </div>
         <!-- saha laukuma beigas -->
+        <div class="secibsar"></div>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
         </div>
-        
+      
+        <!-- tabula ar datiem izmantojot for operatoru -->
+
     <table class="table table-striped split left" >
         <tr>
             {%for headers in findSpele[0].keys()%}
