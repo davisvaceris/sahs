@@ -1359,8 +1359,8 @@ dictionary = []
 
 for vertiba in dati_test:
     temp_dic={} 
-    temp_dic["numurs"]=vertiba[0]
-    temp_dic["pilseta/valsts"]=vertiba[1]
+    temp_dic["spele_id"]=vertiba[0]
+    temp_dic["pilseta_valsts"]=vertiba[1]
     temp_dic["baltais_speletajs"]=vertiba[2]
     temp_dic["melnais_speletajs"]=vertiba[3]
     temp_dic["gajieni"]=vertiba[4]
